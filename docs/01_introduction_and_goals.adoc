@@ -46,6 +46,12 @@ A table with quality goals and concrete scenarios, ordered by priorities
 ****
 Los principales atributos de calidad que queremos que tenga nuestro proyecto son los siguientes:
 
+[options="header",cols="1,2"]
+|===
+|Objectivo|Detalles
+| _<Objetivo1>_ | _<Detalle1>_ 
+| _<Objetivo2>_ | _<Detalle2>_ 
+|===
 
 === Stakeholders
 
