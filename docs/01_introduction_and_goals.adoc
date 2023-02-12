@@ -49,8 +49,11 @@ Los principales atributos de calidad que queremos que tenga nuestro proyecto son
 [options="header",cols="1,2"]
 |===
 |Objectivo|Detalles
-| _<Objetivo1>_ | _<Detalle1>_ 
-| _<Objetivo2>_ | _<Detalle2>_ 
+| _Privacidad_ | _Guardaremos la privacidad del usuario. Lo lograremos usando SOLID, que principalmente se basa en almacenar en la base de datos información a cerca del usuario cliente quién será el que nos autorice guardar dicha información._ 
+| _Rendimiento_ | _Para la creación de esta aplicación queremos garantizar la máxima rapidez que se pueda a la hora de responder a las peticiones del usuario._ 
+| _Usabilidad_ | _El uso de la aplicaicón debe resultar un proceso intuitivo y sencillo para el usuario cliente._
+| _Mantenibilidad_ | _Procuraremos cuidar la arquitectura de la aplicación de manera que se pueda añadir, modificar o quitar funcionalidad con el menor número posible de cambios._
+| _Testeabilidad_| _Nuestra aplicaicón también podrá ser testeable, es decir, estará sometida a una serie de pruebas unitarias que realizaremos para asegurar un correcto funcionamiento del sistema, además de identificar pequeños errores y poder corregirlos en tal caso._
 |===
 
 === Stakeholders
