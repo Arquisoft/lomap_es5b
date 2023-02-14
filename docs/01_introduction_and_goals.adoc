@@ -99,6 +99,9 @@ Table with role names, person names, and their expectations with respect to the 
 [options="header",cols="1,2,2"]
 |===
 |Role/Name|Contact|Expectations
-| _<Role-1>_ | _<Contact-1>_ | _<Expectation-1>_
-| _<Role-2>_ | _<Contact-2>_ | _<Expectation-2>_
+| _Cliente_ | _Ayuntamiento de Bruselas_ | _Una aplicación en la que los ciudadanos puedan disponer de mapas personalizados sobre lugares y negocios locales de la ciudad_
+| _Empresa contratada_ | _HappySw_ | _Desarrollo de un software genérico que pueda ser utilizada y desplegada en otras ciudades_
+| _Equipo de desarrollo_ | _Desarrolladores de HappySw_ | _Información clara y concisa sobre los requisitos de la aplicación_
+| _Usuarios_ | _Ciudadanos de Bruselas_ | _Una aplicación usable y sencilla que les permita crear mapas personalizados de los lugares que les interesen_
+| _Jefe de proyecto_ | _Profesores de la asignatura_ | _Desarrollo por parte de los estudiantes de una aplicación que cumpla sus criterios_
 |===
