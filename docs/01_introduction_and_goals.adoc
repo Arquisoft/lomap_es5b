@@ -12,22 +12,22 @@ Describes the relevant requirements and the driving forces that software archite
 
 === Requirements Overview
 .Requisitos funcionales
-* La aplicacion permitirá la utilizacion de varios roles de usuario que podran identificarse para obtener la vista de sus mapas guardados.
+* La aplicación permitirá la utilizacion de varios roles de usuario que podran identificarse para obtener la vista de sus mapas guardados.
 * Los usuarios podran realizar acciones de "feedback" (ya sea comentar, reaccionar, asociar imagenes) a los lugares añadidos.
 * Cada usuario podra crear y compartir un mapa con las ubicaciones que el escoja con otros usuarios de la aplicacion.
-* La visualizacion de los mapas permitira el uso de filtros .
+* La visualización de los mapas permitira el uso de filtros .
 
 .Requisitos funcionales opcionales
-* Creacion de mapas par una comunidad.
-* Los usuarios podran crear rutas y obtener informacion de nuevos lugares que puedan aparecer.
-* Creacion de un "Newsfeed" para estar al dia de las ultimas actualizaciones.
+* Creacion de mapas para una comunidad.
+* Los usuarios podran crear rutas y obtener información de nuevos lugares que puedan aparecer.
+* Creación de un "Newsfeed" para estar al dia de las ultimas actualizaciones.
 * Roles distintos en el sistema.
 
 
 .Requisitos no funcionales
-* La aplicacion guardara de manera segura los datos de los usuarios que la utilicen.
-* El tiempo de respuesta debe ser relativamente razonable bajo para evitar que al usuario no le de sensacion de que la aplicacion esta "colgada".
-* La aplicacion se realizara en React usando TypeScript.
+* La aplicación guardara de manera segura los datos de los usuarios que la utilicen.
+* El tiempo de respuesta debe ser relativamente razonable bajo para evitar que al usuario no tenga la sensacion de que la aplicacion esta "colgada".
+* La aplicación se realizara en React usando TypeScript.
 
 
 [role="arc42help"]
