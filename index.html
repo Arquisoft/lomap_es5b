@@ -558,54 +558,6 @@ For documentation of your own system you use better the <em>plain</em> version.<
 </div>
 <div class="sect2">
 <h3 id="_requirements_overview">1.1. Requirements Overview</h3>
-<div class="ulist">
-<div class="title">Requisitos funcionales</div>
-<ul>
-<li>
-<p>La aplicación permitirá la utilizacion de varios roles de usuario que podran identificarse para obtener la vista de sus mapas guardados.</p>
-</li>
-<li>
-<p>Los usuarios podran realizar acciones de "feedback" (ya sea comentar, reaccionar, asociar imagenes) a los lugares añadidos.</p>
-</li>
-<li>
-<p>Cada usuario podra crear y compartir un mapa con las ubicaciones que el escoja con otros usuarios de la aplicacion.</p>
-</li>
-<li>
-<p>La visualización de los mapas permitira el uso de filtros .</p>
-</li>
-</ul>
-</div>
-<div class="ulist">
-<div class="title">Requisitos funcionales opcionales</div>
-<ul>
-<li>
-<p>Creacion de mapas para una comunidad.</p>
-</li>
-<li>
-<p>Los usuarios podran crear rutas y obtener información de nuevos lugares que puedan aparecer.</p>
-</li>
-<li>
-<p>Creación de un "Newsfeed" para estar al dia de las ultimas actualizaciones.</p>
-</li>
-<li>
-<p>Roles distintos en el sistema.</p>
-</li>
-</ul>
-</div>
-<div class="ulist">
-<div class="title">Requisitos no funcionales</div>
-<ul>
-<li>
-<p>La aplicación guardara de manera segura los datos de los usuarios que la utilicen.</p>
-</li>
-<li>
-<p>El tiempo de respuesta debe ser relativamente razonable bajo para evitar que al usuario no tenga la sensacion de que la aplicacion esta "colgada".</p>
-</li>
-<li>
-<p>La aplicación se realizara en React usando TypeScript.</p>
-</li>
-</ul>
-</div>
 <div class="sidebarblock arc42help">
 <div class="content">
 <div class="paragraph">
@@ -649,43 +601,6 @@ If you as an architect do not know how the quality of your work will be judged �
 </div>
 </div>
 </div>
-<div class="paragraph">
-<p>Los principales atributos de calidad que queremos que tenga nuestro proyecto son los siguientes:</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 66.6667%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Objectivo</th>
-<th class="tableblock halign-left valign-top">Detalles</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Privacidad</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Guardaremos la privacidad del usuario. Lo lograremos usando SOLID, que principalmente se basa en almacenar en la base de datos información a cerca del usuario cliente quién será el que nos autorice guardar dicha información.</em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Rendimiento</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Para la creación de esta aplicación queremos garantizar la máxima rapidez que se pueda a la hora de responder a las peticiones del usuario.</em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Usabilidad</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>El uso de la aplicaicón debe resultar un proceso intuitivo y sencillo para el usuario cliente.</em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Mantenibilidad</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Procuraremos cuidar la arquitectura de la aplicación de manera que se pueda añadir, modificar o quitar funcionalidad con el menor número posible de cambios.</em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Testeabilidad</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Nuestra aplicaicón también podrá ser testeable, es decir, estará sometida a una serie de pruebas unitarias que realizaremos para asegurar un correcto funcionamiento del sistema, además de identificar pequeños errores y poder corregirlos en tal caso.</em></p></td>
-</tr>
-</tbody>
-</table>
 </div>
 <div class="sect2">
 <h3 id="_stakeholders">1.3. Stakeholders</h3>
@@ -1825,7 +1740,7 @@ Created by Dr. Peter Hruschka &amp; Dr. Gernot Starke.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-02-14 15:45:25 +0100
+Last updated 2023-02-06 18:20:44 +0100
 </div>
 </div>
 </body>
