@@ -1,5 +1,8 @@
 [[section-introduction-and-goals]]
 == Introduction and Goals
+LoMap es un sistema de gestión de mapas y lugares desarrollado por la empresa HappySw. El objetivo principal de este software es permitir a una red de usuarios 
+crear mapas personalizados con los lugares y rutas que él haya decido incorporar. Además este grupo de personas podrán interactuar entre ellos a modo de red social, 
+tendrás la posibilidad de dejar reseñas y comentarios o llegar a ver y utilizar los maas de otro usuarios.
 
 [role="arc42help"]
 ****
