@@ -536,6 +536,11 @@ For documentation of your own system you use better the <em>plain</em> version.<
 <div class="sect1">
 <h2 id="section-introduction-and-goals">1. Introduction and Goals</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>LoMap es un sistema de gestión de mapas y lugares desarrollado por la empresa HappySw. El objetivo principal de este software es permitir a una red de usuarios
+crear mapas personalizados con los lugares y rutas que él haya decido incorporar. Además este grupo de personas podrán interactuar entre ellos a modo de red social,
+tendrás la posibilidad de dejar reseñas y comentarios o llegar a ver y utilizar los maas de otro usuarios.</p>
+</div>
 <div class="sidebarblock arc42help">
 <div class="content">
 <div class="paragraph">
@@ -1595,6 +1600,42 @@ on this list.</p>
 <div class="sect1">
 <h2 id="section-design-decisions">9. Design Decisions</h2>
 <div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 33.3333%;">
+<col style="width: 50.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Decisión tomada</th>
+<th class="tableblock halign-left valign-top">Ventaja</th>
+<th class="tableblock halign-left valign-top">Desventaja</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>React JS</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Es de código abierto e intuitivo además de fácil de aprender. Se encuentra documentación en Internet y hay muchos vídeos tutoriales en Youtube.</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Es la primera vez que la usamos.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>MongoDB</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Para la parte de la BBDD hemos optado por esta opción. Es una base de datos no relacional y con una implementación sencilla.</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Tampoco hemos trabajado ninguna vez con esta base de datos.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Google Maps Api</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Es una API de google que usaremos para el mapa. Es intuitivo y fácil de usar, además es gratuito. En otra asignatura alguno de los del equipo ya lo ha utilizado</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>A veces puede llegar a ser impreciso.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>SOLID</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Nos permitirá guardar información del usuario con cierta seguridad.</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Tampoco nunca hemos trabajado con ello.</em></p></td>
+</tr>
+</tbody>
+</table>
 <div class="sidebarblock arc42help">
 <div class="content">
 <div class="paragraph">
@@ -1840,7 +1881,7 @@ Created by Dr. Peter Hruschka &amp; Dr. Gernot Starke.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-02-16 09:15:05 +0100
+Last updated 2023-02-20 09:31:40 +0100
 </div>
 </div>
 </body>
