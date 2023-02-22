@@ -30,26 +30,7 @@ There are many notations for describing scenarios, e.g.
 
 ****
 
-=== <Runtime Scenario 1>
 
-
-* _<insert runtime diagram or textual description of the scenario>_
-* _<insert description of the notable aspects of the interactions between the
-building block instances depicted in this diagram.>_
-
-It is possible to use a sequence diagram:
-
-[plantuml,"Sequence diagram",png]
-----
-actor Alice
-actor Bob
-database Pod as "Bob's Pod"
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
-Alice  --> Pod: Store route
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
-----
 === Usuario crea una cuenta o se loguea.
 En este caso vemos la interaccion de un usuario nuevo que va a realizar por primera vez el ingreso de sesion 
 o se va autenticar en el sistema.
@@ -67,9 +48,24 @@ Pod -> LoMap: datos de Bob
 LoMap -> Pod: creacion cuenta loadData()
 ----
 
-=== Acceso al mapa principal
+=== Accesos de opciones
 Este caso tiene lugar una vez los usuarios estan logeados dentro de la aplicacion y se va a mostrar un panel con diversas 
-opciones para que el usuario elija que mapa quiere acceder.
+opciones para que el usuario elija entre todas ellas, como por ejemplo compartir con otros usuarios.
+[plantuml,"InteractiveMap_00",png]
+----
+actor Bob
+actor Alice
+database MongoDB
+participant Pod
+participant LoMap
+Bob -> LoMap: compartirCon
+LoMap -> MongoDB: extraePersonas
+MongoDB -> MongoDB: guarda lugar en los usuarios
+MongoDB -> Pod: actualiza pods de usuarios
+MongoDB -> LoMap: confirmacion
+LoMap -> Bob: success
+LoMap -> Alice: notificacion
+----
 
 === Interaccion con el mapa
 Veremos el caso en el que el usuario interacciona con el mapa para añadir lugares o realizar interacciones tales
@@ -82,6 +78,8 @@ database MongoDB
 participant API
 participant LoMap
 Bob -> LoMap: vision del mapa
+LoMap -> Bob: vista
+Bob -> LoMap: actionClick()
 LoMap -> API: obtener datos de click
 API -> LoMap: envuelve los datos en objeto
 LoMap -> Bob: accion de guardar (o editar)
