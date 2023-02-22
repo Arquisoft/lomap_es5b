@@ -22,3 +22,31 @@ Motivate what you have decided and why you decided that way,
 based upon your problem statement, the quality goals and key constraints.
 Refer to details in the following sections.
 ****
+
+=== Technology Decisions
+
+Se han tomado las siguientes decisiones.
+
+React::
+
+Se usará esta herramienta ya que es la más adecuada para el proyecto y nos facilitará el trabajo. EL lenguaje principal del poyecto será TypeScript.
+
+MongoDB::
+
+Esta herramienta nos ayudará ya que tiene elementos dinámicos y esto contribuirá a la rapidez de la aplicación.
+
+SOLID::
+
+Es una potente herramienta de base de datos. Se usará para almacenar la información de la aplicación.
+
+=== Decisions about the top-level decomposition
+
+Durante la fase de desarrollo de la aplicación, el proyecta se basará en el modelo Vista-Controlador.
+
+=== Decision on Quality Goals
+
+La principal decisión es la relacionada con el objetivo de calidad de mayor prioridad, la privacidad, y también con el objetivo de calidad con prioridad 3, la seguridad. Estos dos objetivos de calidad se conseguirán con el uso de los PODs. Por otro lado, el objetivo de calidad de usabilidad se conseguirá con una construcción de la aplicación accesible e intuitiva.
+
+=== Organizational Decisions
+
+La organización del proyecto se hizo en las reuniones de equipo de las semanas pasadas. Se repartieron las tareas iniciales y se decidió que dos integrantes del equipo se dedicarian a frontend y los dos restantes a backend. Tanto los que se dedicarán a frontend como los que se decicarán a backend podrán participar en ambas partes si se necesitara.
