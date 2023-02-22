@@ -20,7 +20,7 @@ concrete and measurable.
 
 === Quality Tree
 
-image::arbol.png[Quality tree]
+image:arbol.png["Quality Tree"]
 
 [role="arc42help"]
 ****
