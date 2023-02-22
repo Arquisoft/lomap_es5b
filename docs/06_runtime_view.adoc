@@ -54,7 +54,7 @@ Alice <-- Bob: another authentication Response
 En este caso vemos la interaccion de un usuario nuevo que va a realizar por primera vez el ingreso de sesion 
 o se va autenticar en el sistema.
 
-[plantuml,"Sequence diagram",png]
+[plantuml,"Login",png]
 ----
 actor Bob
 database Pod as "Bob's Pod"
@@ -66,4 +66,29 @@ API -> Pod: accede a datos de Bob access()
 Pod -> LoMap: datos de Bob
 LoMap -> Pod: creacion cuenta loadData()
 ----
-=== <Runtime Scenario n>
+
+=== Acceso al mapa principal
+Este caso tiene lugar una vez los usuarios estan logeados dentro de la aplicacion y se va a mostrar un panel con diversas 
+opciones para que el usuario elija que mapa quiere acceder.
+[plantuml,"InteractiveMap_01",png]
+----
+----
+
+
+=== Interaccion con el mapa
+Veremos el caso en el que el usuario interacciona con el mapa para añadir lugares o realizar interacciones tales
+como escribir comentarios en ellos.
+
+[plantuml,"InteractiveMap_01",png]
+----
+actor Bob
+database MongoDB
+participant API
+participant LoMap
+Bob -> LoMap: vision del mapa
+LoMap -> API: obtener datos de click
+API -> LoMap: envuelve los datos en objeto
+LoMap -> Bob: accion de guardar (o editar)
+Bob -> LoMap: enviar accion
+LoMap -> MongoDB: almacena el lugar actualizado
+----
