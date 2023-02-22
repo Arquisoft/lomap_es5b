@@ -1,4 +1,9 @@
 # LoMap ES5B
+Participantes: 
+- Buenaga Gutiérrez, Sergio 
+- Alonso Fernández, Daniel Alberto 
+- Pan Wang, Chen Xin 
+- Urones Clavera, Pablo Fernando
 
 [![Actions Status](https://github.com/arquisoft/lomap_es5b/workflows/CI%20for%20LOMAP_ES5B/badge.svg)](https://github.com/arquisoft/lomap_es5b/actions)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Arquisoft_lomap_es5b&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Arquisoft_lomap_es5b)

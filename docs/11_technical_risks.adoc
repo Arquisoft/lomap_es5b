@@ -1,6 +1,14 @@
 [[section-technical-risks]]
 == Risks and Technical Debts
-
+En todo proyecto además de puntos positivos también hay ciertos puntos débiles o riegos debemos tener en cuenta. Y los nuestros son los siguientes:
+[options="header",cols="1,2,3"]
+|===
+|Riesgo|Descripción|Nivel
+| _Tiempo_ | _No nos sobra tiempo precisamente, todos los del equipo tenemos más asignaturas que cursar por lo debemos organizarnos lo más que podamos._ | _Nivel medio._ 
+| _Uso de las nuevas tecnologías_ | _La mayor parte de ellas ninguno de los del grupo han trabajdo con ellas por lo que estaríamos constantemente informándonos sobre su funcionalidad y aprendiendo de forma autónoma._ | _Nivel alto._ 
+| _Equipo_ | _Es la primera vez que trabajamos todos juntos en un mismo proyecto por lo que no conocemos la forma de trabajar del resto así que debemos establecer la máxima comunicación posible_ | _Nivel bajo._
+| _Github_| _Podría ocurrir que no nos coordinemos en un momento dado y entonces a la hora de hacer los "merges" surjen los famosos conflictos._ |_Nivel medio._|
+|===
 
 [role="arc42help"]
 ****

@@ -1,6 +1,16 @@
 [[section-design-decisions]]
 == Design Decisions
-
+A continuación mostraremos una tabla con las decisiones que hemos tomado en conjunto:
+[options="header",cols="1,2,3"]
+|===
+|Decisión tomada|Ventaja|Desventaja
+| _React JS_ | _Es de código abierto e intuitivo además de fácil de aprender. Se encuentra documentación en Internet y hay muchos vídeos tutoriales en Youtube._ | _Es la primera vez que la usamos._ 
+| _MongoDB_ | _Para la parte de la BBDD hemos optado por esta opción. Es una base de datos no relacional y con una implementación sencilla._ | _Tampoco hemos trabajado ninguna vez con esta base de datos._ 
+| _NodeJs_ | _Buen lenguaje para la parte del backend_ | _también es la primera vez que la utilizamos._
+| _Google Maps API_ | _Es una API de google que usaremos para el mapa. Es intuitivo y fácil de usar, además es gratuito. En otra asignatura alguno de los del equipo ya lo ha utilizado_ | _A veces puede llegar a ser impreciso._
+| _SOLID_ | _Nos permitirá guardar información del usuario con cierta seguridad._ | _Tampoco nunca hemos trabajado con ello._
+| _Idioma español e inglés_| _La documentación del proyecto estará redactada en español aunque las actas de las reuniones estrán en inglés_ | _Es mucho menos internacionalizado._
+|===
 
 [role="arc42help"]
 ****

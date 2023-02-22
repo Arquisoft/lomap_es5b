@@ -1,5 +1,8 @@
 [[section-introduction-and-goals]]
 == Introduction and Goals
+LoMap es un sistema de gestión de mapas y lugares desarrollado por la empresa HappySw. El objetivo principal de este software es permitir a una red de usuarios 
+crear mapas personalizados con los lugares y rutas que él haya decido incorporar. Además este grupo de personas podrán interactuar entre ellos a modo de red social, 
+tendrás la posibilidad de dejar reseñas y comentarios o llegar a ver y utilizar los maas de otro usuarios.
 
 [role="arc42help"]
 ****
@@ -11,6 +14,24 @@ Describes the relevant requirements and the driving forces that software archite
 ****
 
 === Requirements Overview
+.Requisitos funcionales
+* La aplicación permitirá la utilizacion de varios roles de usuario que podran identificarse para obtener la vista de sus mapas guardados.
+* Los usuarios podran realizar acciones de "feedback" (ya sea comentar, reaccionar, asociar imagenes) a los lugares añadidos.
+* Cada usuario podra crear y compartir un mapa con las ubicaciones que el escoja con otros usuarios de la aplicacion.
+* La visualización de los mapas permitira el uso de filtros .
+
+.Requisitos funcionales opcionales
+* Creacion de mapas para una comunidad.
+* Los usuarios podran crear rutas y obtener información de nuevos lugares que puedan aparecer.
+* Creación de un "Newsfeed" para estar al dia de las ultimas actualizaciones.
+* Roles distintos en el sistema.
+
+
+.Requisitos no funcionales
+* La aplicación guardara de manera segura los datos de los usuarios que la utilicen.
+* El tiempo de respuesta debe ser relativamente razonable bajo para evitar que al usuario no tenga la sensacion de que la aplicacion esta "colgada".
+* La aplicación se realizara en React usando TypeScript.
+
 
 [role="arc42help"]
 ****
@@ -44,6 +65,17 @@ If you as an architect do not know how the quality of your work will be judged �
 .Form
 A table with quality goals and concrete scenarios, ordered by priorities
 ****
+Los principales atributos de calidad que queremos que tenga nuestro proyecto son los siguientes:
+
+[options="header",cols="1,2"]
+|===
+|Objectivo|Detalles
+| _Privacidad_ | _Guardaremos la privacidad del usuario. Lo lograremos usando SOLID, que principalmente se basa en almacenar en la base de datos información a cerca del usuario cliente quién será el que nos autorice guardar dicha información._ 
+| _Rendimiento_ | _Para la creación de esta aplicación queremos garantizar la máxima rapidez que se pueda a la hora de responder a las peticiones del usuario._ 
+| _Usabilidad_ | _El uso de la aplicaicón debe resultar un proceso intuitivo y sencillo para el usuario cliente._
+| _Mantenibilidad_ | _Procuraremos cuidar la arquitectura de la aplicación de manera que se pueda añadir, modificar o quitar funcionalidad con el menor número posible de cambios._
+| _Testeabilidad_| _Nuestra aplicaicón también podrá ser testeable, es decir, estará sometida a una serie de pruebas unitarias que realizaremos para asegurar un correcto funcionamiento del sistema, además de identificar pequeños errores y poder corregirlos en tal caso._
+|===
 
 === Stakeholders
 
@@ -70,6 +102,9 @@ Table with role names, person names, and their expectations with respect to the 
 [options="header",cols="1,2,2"]
 |===
 |Role/Name|Contact|Expectations
-| _<Role-1>_ | _<Contact-1>_ | _<Expectation-1>_
-| _<Role-2>_ | _<Contact-2>_ | _<Expectation-2>_
+| _Cliente_ | _Ayuntamiento de Bruselas_ | _Una aplicación en la que los ciudadanos puedan disponer de mapas personalizados sobre lugares y negocios locales de la ciudad_
+| _Empresa contratada_ | _HappySw_ | _Desarrollo de un software genérico que pueda ser utilizada y desplegada en otras ciudades_
+| _Equipo de desarrollo_ | _Desarrolladores de HappySw_ | _Información clara y concisa sobre los requisitos de la aplicación_
+| _Usuarios_ | _Ciudadanos de Bruselas_ | _Una aplicación usable y sencilla que les permita crear mapas personalizados de los lugares que les interesen_
+| _Jefe de proyecto_ | _Profesores de la asignatura_ | _Desarrollo por parte de los estudiantes de una aplicación que cumpla sus criterios_
 |===
