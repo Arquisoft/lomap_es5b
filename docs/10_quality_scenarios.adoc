@@ -1,6 +1,7 @@
 [[section-quality-scenarios]]
 == Quality Requirements
-
+En esta sección ampliaremos los requisitos de calidad anteriormente mencionados para poder explicarlos de una mejor forma.
+También hablaremos de como estos requisitos afectaran a la arquitectura planeada.
 
 [role="arc42help"]
 ****
