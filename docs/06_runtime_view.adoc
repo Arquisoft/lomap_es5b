@@ -70,10 +70,6 @@ LoMap -> Pod: creacion cuenta loadData()
 === Acceso al mapa principal
 Este caso tiene lugar una vez los usuarios estan logeados dentro de la aplicacion y se va a mostrar un panel con diversas 
 opciones para que el usuario elija que mapa quiere acceder.
-[plantuml,"InteractiveMap_01",png]
-----
-----
-
 
 === Interaccion con el mapa
 Veremos el caso en el que el usuario interacciona con el mapa para añadir lugares o realizar interacciones tales
