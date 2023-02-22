@@ -50,8 +50,20 @@ Alice  --> Pod: Store route
 Alice -> Bob: Another authentication Request
 Alice <-- Bob: another authentication Response
 ----
-=== <Runtime Scenario 2>
+=== Usuario crea una cuenta o se loguea.
+En este caso vemos la interaccion de un usuario nuevo que va a realizar por primera vez el ingreso de sesion 
+o se va autenticar en el sistema.
 
-=== ...
-
+[plantuml,"Sequence diagram",png]
+----
+actor Bob
+database Pod as "Bob's Pod"
+participant API
+participant LoMap
+Bob -> LoMap: llamada a login() de Bob
+LoMap -> API: obtener datos de Bob
+API -> Pod: accede a datos de Bob access()
+Pod -> LoMap: datos de Bob
+LoMap -> Pod: creacion cuenta loadData()
+----
 === <Runtime Scenario n>
