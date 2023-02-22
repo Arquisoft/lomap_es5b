@@ -20,6 +20,8 @@ concrete and measurable.
 
 === Quality Tree
 
+image:arbol.png
+
 [role="arc42help"]
 ****
 .Content
