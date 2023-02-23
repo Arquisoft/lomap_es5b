@@ -17,3 +17,39 @@ If needed you can subdivide them into
 technical constraints, organizational and political constraints and
 conventions (e.g. programming or versioning guidelines, documentation or naming conventions)
 ****
+
+=== Rectricciones técnicas
+
+[options="header",cols="1,2"]
+|===
+|Restricción|Descripción
+| _SOLID_ | _Permite guardar/alamcenar información de datos de los usuarios de una forma segura en Pods, que consisten en unos alamcenes de infromación que son descentralizados y los usuarios eligen qué aplicaciones y qué usuarios pueden acceder a dicha información._ 
+| _GIT (FLOW)_ | _Se usuará como un sistema de control de versiones._ 
+| _GITHUB_ | _Lugar donde nuestro repositorio de trabajo esté localizado._ 
+|===
+
+
+
+=== Restricciones de organización
+
+[options="header",cols="1,2"]
+|===
+|Restricción|Descripción
+| _Tamaño del equipo_ | _Actualmente este equipo está formado por 4 personas._ 
+| _Planificación_ | _Este trabajo consta de varias entregas parciales y presentaciones en un plazo de aproximadamente 3 meses._ 
+| _Reuniones_ | _Tenemos una reunión semanalmente (jueves a las 9:00) que es presencialmente. También hacemis reuniones a traves de la aplicación Discord donde debatimos también a cerca del trabajo._ 
+| _Distribución del equipo_| _Al ser un número par hemos nos hemos organizado de la siguiente manera: 2 personas son las encargadas del backend y 2 personas del fronted. La división del trabajo ha sido de acordado por todos los miembros del equipo_
+|===
+
+
+=== Convenciones
+
+[options="header",cols="1,2"]
+|===
+|Restricción|Descripción
+| _Documentación_ | _Queremos usar la plantilla Arc42 que nos han facilitado._ 
+| _SOLID_ | _Seguiremos las convenciones SOLID preestablecidad._ 
+| _PROTECCIÓN DE DATOS_ | _Queremos que haya un mínimo de seguridad en nuestro proyecto._ 
+| _Accesibilidad_| _Procuraremos que la aplicación sea intuitiva y fácil para el uso de todos los usuarios._
+|===
+
