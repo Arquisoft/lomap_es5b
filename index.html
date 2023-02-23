@@ -480,8 +480,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#section-concepts">8. Cross-cutting Concepts</a>
 <ul class="sectlevel2">
 <li><a href="#_domain_model">8.1. Domain model</a></li>
-<li><a href="#_concept_2">8.2. <em>&lt;Concept 2&gt;</em></a></li>
-<li><a href="#_concept_n">8.3. <em>&lt;Concept n&gt;</em></a></li>
+<li><a href="#_seguridad">8.2. Seguridad</a></li>
+<li><a href="#_persistencia">8.3. Persistencia</a></li>
+<li><a href="#_testeabilidad">8.4. Testeabilidad</a></li>
 </ul>
 </li>
 <li><a href="#section-design-decisions">9. Design Decisions</a></li>
@@ -1579,22 +1580,26 @@ on this list.</p>
 <div class="sect2">
 <h3 id="_domain_model">8.1. Domain model</h3>
 <div class="paragraph">
-<p><span class="image"><img src="./images/UmlDiagram.png" alt="Example UML Diagram"></span></p>
+<p><span class="image"><img src="./images/DiagramaUml.png" alt="Diagrama UML"></span></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_concept_2">8.2. <em>&lt;Concept 2&gt;</em></h3>
+<h3 id="_seguridad">8.2. Seguridad</h3>
 <div class="paragraph">
-<p><em>&lt;explanation&gt;</em></p>
-</div>
-<div class="paragraph">
-<p>&#8230;&#8203;</p>
+<p>Para esta aplicación nos parece importante la parte de la seguridad debido a que queremos guaradar la infromación del inicio sesión de los usuarios y repeter la privacidad de los datos (como si fuera una aplicación en la vida real). Se evitará el uso malicioso sobre las API además de que el sistema de POD integrará la información necesaria para que sea personal.
+También pondremos que las contraseñas de los usuarios estén cifradas.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_concept_n">8.3. <em>&lt;Concept n&gt;</em></h3>
+<h3 id="_persistencia">8.3. Persistencia</h3>
 <div class="paragraph">
-<p><em>&lt;explanation&gt;</em></p>
+<p>Los datos los alamcenaremos en una base de datos específica.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_testeabilidad">8.4. Testeabilidad</h3>
+<div class="paragraph">
+<p>Antes de seguir implementando otra funcionalidad debemos probar la aplicación de manera que ésta funcione correctamente y como se nos indica. Usaremos una metodología de trabajo en cascada para que la parte de la realización de los tests nos sea más sencilla.</p>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
@@ -1991,7 +1996,7 @@ Created by Dr. Peter Hruschka &amp; Dr. Gernot Starke.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-02-22 14:22:02 +0100
+Last updated 2023-02-20 09:31:40 +0100
 </div>
 </div>
 </body>
