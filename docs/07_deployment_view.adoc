@@ -48,39 +48,32 @@ Describe (usually in a combination of diagrams, tables, and text):
 For multiple environments or alternative deployments please copy that section of arc42 for all relevant environments.
 ****
 
-_**<Overview Diagram>**_
+
+
+:imagesdir: images/
+image::Arquitectura.drawio.png[]
 
 Motivation::
 
-_<explanation in text form>_
+La estructura mostrada anteriormente, representa nuestras intenciones a la hora de desplegar la applicación en un primer lugar. Posiblemente, en un futuro, sufra ligeras variaciones durante el desarrollo del proyecto. 
+
 
 Quality and/or Performance Features::
 
-_<explanation in text form>_
+Uno de nuestros principales objetivos, es conseguir que el buen desempeño de la aplicación sea siempre constante, y solo pueda depender de factores externos, como por ejemplo el rendimiento del software de terceros (las APIs usadas) o la conexión a internet del cliente. Por último también mencionar que se hará un grán énfasis en la seguridad y privacidad de los usuarios. 
 
 Mapping of Building Blocks to Infrastructure::
-_<description of the mapping>_
+|===
+|**Nombre**|**Descripción**
+| _Client Device_ | Dispositivo utilizado por el cliente con el que accede a nuestra aplicación. 
+| _Solid POD_ | Tecnología usada para gestionar la información privada del cliente.    
+| _Web Server_ | Servidor en el que se alojará nuestra aplicación web (falta por definir).
+| _Docker_ | Contenedor software que automatizará el despliegue de nuestra aplicación web.
+| _WebApp_| Parte de la aplicación mostrada al cliente y renderizada por el buscador. También conocido como Front-End.
+| _RestApi_| Parte de la aplicación encargada de gestionar principalmente los datos. También conocido como Back-End.
+| _MapApi_| Aplicación externa utilizada para realizar funciones relacionadas con los mapas y ubicaciones.
+| _MongoDB_| Base de datos NoSQL encargada de almacenar toda la información necesaria.
+|===
 
 
-=== Infrastructure Level 2
 
-[role="arc42help"]
-****
-Here you can include the internal structure of (some) infrastructure elements from level 1.
-
-Please copy the structure from level 1 for each selected element.
-****
-
-==== _<Infrastructure Element 1>_
-
-_<diagram + explanation>_
-
-==== _<Infrastructure Element 2>_
-
-_<diagram + explanation>_
-
-...
-
-==== _<Infrastructure Element n>_
-
-_<diagram + explanation>_
