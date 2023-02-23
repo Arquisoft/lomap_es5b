@@ -49,6 +49,6 @@ conventions (e.g. programming or versioning guidelines, documentation or naming 
 |Restricción|Descripción
 | _Documentación_ | _Queremos usar la plantilla Arc42 que nos han facilitado._ 
 | _SOLID_ | _Seguiremos las convenciones SOLID preestablecidad._ 
-| _PROTECCIÓN DE DATOS_ | _Queremos que haya un mínimo de seguridad en nuestro proyecto._ 
+| _Protección de datos_ | _Queremos que haya un mínimo de seguridad en nuestro proyecto._ 
 | _Accesibilidad_| _Procuraremos que la aplicación sea intuitiva y fácil para el uso de todos los usuarios._
 |===
