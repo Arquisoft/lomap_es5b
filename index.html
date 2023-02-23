@@ -462,7 +462,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_technical_context">3.2. Technical Context</a></li>
 </ul>
 </li>
-<li><a href="#section-solution-strategy">4. Solution Strategy</a></li>
+<li><a href="#section-solution-strategy">4. Solution Strategy</a>
+<ul class="sectlevel2">
+<li><a href="#_technology_decisions">4.1. Technology Decisions</a></li>
+<li><a href="#_decisions_about_the_top_level_decomposition">4.2. Decisions about the top-level decomposition</a></li>
+<li><a href="#_decision_on_quality_goals">4.3. Decision on Quality Goals</a></li>
+<li><a href="#_organizational_decisions">4.4. Organizational Decisions</a></li>
+</ul>
+</li>
 <li><a href="#section-building-block-view">5. Building Block View</a>
 <ul class="sectlevel2">
 <li><a href="#_whitebox_overall_system">5.1. Whitebox Overall System</a></li>
@@ -960,11 +967,8 @@ The title of the table is the name of your system, the three columns contain the
 </div>
 </div>
 <div class="paragraph">
-<p>&lt;El siguiente diagrama muestra el entorno en el que se va a desarrollar la aplicación y sus relaciones.&gt;
+<p>El siguiente diagrama muestra el entorno en el que se va a desarrollar la aplicación y sus relaciones.
 <span class="image"><img src="./images/Diagrama_contexto.png" alt="Example Context Diagram"></span></p>
-</div>
-<div class="paragraph">
-<p><strong>&lt;optionally: Explanation of external domain interfaces&gt;</strong></p>
 </div>
 </div>
 <div class="sect2">
@@ -987,14 +991,40 @@ together with a mapping table showing the relationships between channels and inp
 </div>
 </div>
 <div class="paragraph">
-<p><strong>&lt;Diagram or Table&gt;</strong></p>
+<p>En cuanto al contexto técnico, en la siguiente tabla se muestra que herramientas se usarán.</p>
 </div>
-<div class="paragraph">
-<p><strong>&lt;optionally: Explanation of technical interfaces&gt;</strong></p>
-</div>
-<div class="paragraph">
-<p><strong>&lt;Mapping Input/Output to Channels&gt;</strong></p>
-</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nombre</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Descripción</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>SOLID</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Permite almacenar datos de forma segura en almacenes de datos descentralizados llamados Pods</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>React</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Biblioteca de JavaScript que facilita el desarrollo de aplicaciones mediante interfaces</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>MongoDB</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Sistema de base de datos orientado a documentos y código abierto</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>GitHub</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Herramienta para realizar el control de versiones con el equipo</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>API</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Se usará una API externa para mostrar el mapa</em></p></td>
+</tr>
+</tbody>
+</table>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
@@ -1039,7 +1069,47 @@ Refer to details in the following sections.</p>
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_technology_decisions">4.1. Technology Decisions</h3>
+<div class="paragraph">
+<p>Se han tomado las siguientes decisiones.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">React</dt>
+<dd>
+<p>Se usará esta herramienta ya que es la más adecuada para el proyecto y nos facilitará el trabajo. EL lenguaje principal del poyecto será TypeScript.</p>
+</dd>
+<dt class="hdlist1">MongoDB</dt>
+<dd>
+<p>Esta herramienta nos ayudará ya que tiene elementos dinámicos y esto contribuirá a la rapidez de la aplicación.</p>
+</dd>
+<dt class="hdlist1">SOLID</dt>
+<dd>
+<p>Es una potente herramienta de base de datos. Se usará para almacenar la información de la aplicación.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_decisions_about_the_top_level_decomposition">4.2. Decisions about the top-level decomposition</h3>
+<div class="paragraph">
+<p>Durante la fase de desarrollo de la aplicación, el proyecta se basará en el modelo Vista-Controlador.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_decision_on_quality_goals">4.3. Decision on Quality Goals</h3>
+<div class="paragraph">
+<p>La principal decisión es la relacionada con el objetivo de calidad de mayor prioridad, la privacidad, y también con el objetivo de calidad con prioridad 3, la seguridad. Estos dos objetivos de calidad se conseguirán con el uso de los PODs. Por otro lado, el objetivo de calidad de usabilidad se conseguirá con una construcción de la aplicación accesible e intuitiva.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_organizational_decisions">4.4. Organizational Decisions</h3>
+<div class="paragraph">
+<p>La organización del proyecto se hizo en las reuniones de equipo de las semanas pasadas. Se repartieron las tareas iniciales y se decidió que dos integrantes del equipo se dedicarian a frontend y los dos restantes a backend. Tanto los que se dedicarán a frontend como los que se decicarán a backend podrán participar en ambas partes si se necesitara.</p>
+</div>
 <div style="page-break-after: always;"></div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -2114,7 +2184,7 @@ Created by Dr. Peter Hruschka &amp; Dr. Gernot Starke.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-02-22 14:22:02 +0100
+Last updated 2023-02-06 18:20:44 +0100
 </div>
 </div>
 </body>
