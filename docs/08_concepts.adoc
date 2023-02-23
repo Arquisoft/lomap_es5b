@@ -52,16 +52,23 @@ image:08-Crosscutting-Concepts-Structure-EN.png["Possible topics for crosscuttin
 
 === Domain model
 
-image:UmlDiagram.png["Example UML Diagram"]
+image:DiagramaUml.png["Diagrama UML"]
 
 
 
-=== _<Concept 2>_
+=== Seguridad
 
-_<explanation>_
+Para esta aplicación nos parece importante la parte de la seguridad debido a que queremos guaradar la infromación del inicio sesión de los usuarios y repeter la privacidad de los datos (como si fuera una aplicación en la vida real). Se evitará el uso malicioso sobre las API además de que el sistema de POD integrará la información necesaria para que sea personal. 
+También pondremos que las contraseñas de los usuarios estén cifradas.
 
-...
 
-=== _<Concept n>_
 
-_<explanation>_
+=== Persistencia
+
+Los datos los alamcenaremos en una base de datos específica.
+
+
+
+=== Testeabilidad
+
+Antes de seguir implementando otra funcionalidad debemos probar la aplicación de manera que ésta funcione correctamente y como se nos indica. Usaremos una metodología de trabajo en cascada para que la parte de la realización de los tests nos sea más sencilla.
