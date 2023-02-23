@@ -52,16 +52,28 @@ image:08-Crosscutting-Concepts-Structure-EN.png["Possible topics for crosscuttin
 
 === Domain model
 
-image:UmlDiagram.png["Example UML Diagram"]
+:imagesdir: images/
+image::lomap_modelo.drawio.png[]
 
 
 
-=== _<Concept 2>_
+=== Security
 
-_<explanation>_
+Como en todo sistema informático la seguridad de nuestra aplicación, y la privacidad e integridad de los datos de nuestros usuarios es una de las partes más importantes del proyecto. En este proyecto se hará principal incapié en la eliminación de cualquier brecha de seguridad web que pueda poner en peligro el producto final. Se tomarán medidas antes distintos tipos de vulnerabilidades como ataques de SQLInjection y XSS (Cross-Site Scripting).
 
-...
 
-=== _<Concept n>_
 
-_<explanation>_
+=== Privacy
+
+Como se mencionó anteriormente, la privacidad de los datos de nuestros usuarios es un factor que se tiene en primer lugar. Para ello nos encargamos de usar tecnologías como _Solid POD_, con la intención de descentralizar la información personal de nuestros usuarios. Además usaremos un sistema de encriptación de claves, para que la base de datos no muestre a simple vista las contraseñas de los distintos usuarios.
+
+
+=== User Experience (UX)
+
+Una de nuestras principales estrategias para hacer de nuestra aplicación web un producto competitivo es con seguir que le usuario tenga una buena experiencia. No solo nos centraremos en mejorar el diseño y estética, sino que también tendremos muy en cuenta dos aspectos de vital importancia: la usabilidad y la accesibilidad.
+Para ello pasaremos rigurosas pruebas tanto manuales como automatizadas, además de aplicar diferentes estadares web.
+
+
+=== Testability
+
+Como una buena práctica, a lo largo del desarrollo, someteremos a nuestro código a múltiples pruebas unitarias, encargadas de asegurar el robustez y eficacia de nuestro producto antes de ser desplegado en la web. 
