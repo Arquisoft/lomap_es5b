@@ -31,8 +31,10 @@ function Login(): JSX.Element {
             />
             </div>
             {/*Implementar las acciones de los botones*/}
-            <Button name='login-button' className='login-button' type="submit">Login</Button>
+            <div className='buttons'>
             <Button name='signup-button' className='signup-button' type="submit">Signup</Button>
+            <Button name='login-button' className='login-button' type="submit">Login</Button>
+            </div>
         </form>
 
     );

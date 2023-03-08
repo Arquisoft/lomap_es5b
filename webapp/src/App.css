@@ -3,7 +3,9 @@
   padding: 0;
 }
 html,body{
-  background-color: grey;
+  background: url('./images/main-background.jpg ');
+  background-position: center;
+  background-size: auto;
 }
 div{
   display: flex;
