@@ -11,8 +11,8 @@ function Login(): JSX.Element {
     return (
         
         <form className='login-form' name='login-form'>
-            {/* añadir el logo aqui */}
-            <image name='login-logo' href='' />
+            {/* añadir el logo aqui <image name='login-logo' href='' />*/}
+            
             <h1>Inicia sesion</h1>
             <div className='inputText'>
             <AccountCircle></AccountCircle>
