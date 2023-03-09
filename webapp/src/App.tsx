@@ -1,32 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
-import Map from './components/Map/Map';
-import { loadMapApi } from './components/utils/GoogleMapsUtils';
+import { MapView } from './components/Map/Map';
+import 'mapbox-gl/dist/mapbox-gl.css'
+import './App.css'
 
-function App(): JSX.Element {
-  
-  //Esto nos ayuda a saber si el mapa fue cargado o no
-  const [scriptLoaded, setScriptLoaded] = useState (false);
-
-  useEffect(() => {
-    //Tenemos que asegurarnos que fue añadido al dominio
-    const googleMapScript = loadMapApi();
-    googleMapScript.addEventListener('load', function() {
-      setScriptLoaded(true);
-    })
-  }, []);
-
-
+const App = () => {
   return (
-      <>
-      <div> El famoso mapa tio</div>
-      <div className = "Map">
-        {scriptLoaded && (
-          <Map mapType= {google.maps.MapTypeId.ROADMAP} mapTypeControl = {true} />
-        )}
-      </div>
-      </>
-  );
+    <div>
+        <MapView/>
+    </div>
+  )
 }
-
-export default App;
+export default App
