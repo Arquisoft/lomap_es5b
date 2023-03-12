@@ -11,18 +11,7 @@ import './App.css';
 import Login from './components/Login';
 import Menu from './components/nav/Menu';
 
-function App(): JSX.Element {
-
-  const [users,setUsers] = useState<User[]>([]);
-
-  const refreshUserList = async () => {
-    setUsers(await getUsers());
-  }
-
-  useEffect(()=>{
-    refreshUserList();
-  },[]);
-
+const App = () => {
   return (
       
       <Container maxWidth="sm">
@@ -36,5 +25,4 @@ function App(): JSX.Element {
     
   );
 }
-
-export default App;
+export default App
