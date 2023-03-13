@@ -1,6 +1,7 @@
 [[section-quality-scenarios]]
 == Quality Requirements
-
+En esta sección ampliaremos los requisitos de calidad anteriormente mencionados para poder explicarlos de una mejor forma.
+También hablaremos de como estos requisitos afectaran a la arquitectura planeada.
 
 [role="arc42help"]
 ****
@@ -18,6 +19,8 @@ concrete and measurable.
 ****
 
 === Quality Tree
+
+image:arbol.png["Quality Tree"]
 
 [role="arc42help"]
 ****
@@ -37,6 +40,21 @@ In any case the tree should include links to the scenarios of the following sect
 ****
 
 === Quality Scenarios
+
+[options="header",cols="1,2"]
+|===
+|Atributo|Escenario
+| _Testeable_ | _Se realizaran las debidas pruebas tanto automatizadas como a mano para ver que la aplicacion es estable y completamente funcional._ 
+| _Mantenibilidad_ | _Debido a la magnitud del proyecto, se realizara un diseño y arquitectura el cual permita la flexibilidad ante eventos inesperados 
+durante desarrollo, esta caracteristica es importante debido a que se quiere reducir gastos en cuanto tiempo._ 
+| _Rendimiento_ | _Se probara mediante tests que el sistema pueda ser lo suficientemente robusto para que aguante simultaneamente varios usuarios conectados a la vez
+sin que esto perjudique la esperiencia del usuario debido a las excesivas cargas._ 
+| _Usabilidad_ |_Un software que sea "usable" es fácil de aprender y utilizar por el usuario final. Esto se logra a través de una interfaz intuitiva, una buena organización de la información y una respuesta rápida del sistema. La usabilidad es importante porque mejora la eficiencia y eficacia del usuario al interactuar con el software. Un software no usable puede generar errores y desmotivar al usuario._
+| _Compatible_ | _Se va a procurar que la aplicacion sea accesible desde distintos dispositivos ya que recordemos que los moviles son ya el medio mas utilizado superando asi las busquedas web en mas de un 50%. Aunque no es un objetivo prioritario se realizara en la medida de lo posible esta adaptación._ 
+| _Privacidad_ | _Los datos personales de los usuarios se almacenaran de forma segura de tal forma que medios externos tengan dificultades si quieren acceder a estos datos._ 
+| _Fiabilidad_ | _Queremos que nuestro producto software sea fiable y no tenga errores mientras el servicio este disponible._ 
+| _Seguridad_ | _Queremos que la aplicacion sea segura para los usuarios, por lo tanto no se guardaran datos sensibles, por ello es que se validaran en servidor. Cualquier "transaccion" realizada contara con los principios ACID._
+|===
 
 [role="arc42help"]
 ****
