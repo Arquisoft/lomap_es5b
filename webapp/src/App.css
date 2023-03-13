@@ -13,18 +13,11 @@
 .contenedor-rutas{
   grid-area: body;
 }
-
-.App-link {
-  color: #61dafb;
+div div:first-child{
+  /*primer div raro mui*/
 }
+.App {
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 .mapboxgl-control-container {
   display: none;
