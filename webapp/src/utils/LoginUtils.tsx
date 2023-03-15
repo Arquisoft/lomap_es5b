@@ -13,12 +13,13 @@ async function loginAndFetch(webId:string) {
     // 2. Start the Login Process if not already logged in.
     if (!getDefaultSession().info.isLoggedIn) {
       await login({
-        clientSecret: webId,
+        //clientSecret: webId,
         // Specify the URL of the user's Solid Identity Provider;
         // e.g., "https://login.inrupt.com".
-        oidcIssuer: "https://solidweb.org/login",
+        oidcIssuer: "https://solidweb.org",
         // Specify the URL the Solid Identity Provider should redirect the user once logged in,
         // e.g., the current page for a single-page app.
+        //o otra url 
         redirectUrl: window.location.href,
         // Provide a name for the application when sending to the Solid Identity Provider
         clientName: "Lomap"
