@@ -1,17 +1,17 @@
-.contenedor-principal{
-  display: grid;
-  grid-template-areas:
-    'nav'
-    'body'
-    'footer';
+*{
+  margin: 0;
+  padding: 0;
 }
-
-.contenedor-navegacion{
-  grid-area: nav;
+html,body{
+  background: url('./images/main-background.jpg ');
+  background-position: center;
+  background-size: auto;
 }
-
-.contenedor-rutas{
-  grid-area: body;
+div{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
 }
 
 .App-link {

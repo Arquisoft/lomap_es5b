@@ -8,19 +8,22 @@ import UserList from './components/UserList';
 import  {getUsers} from './api/api';
 import {User} from './shared/shareddtypes';
 import './App.css';
-import Login from './components/Login';
-import Menu from './components/nav/Menu';
-import { MapView } from './components/Map/Map';
+import Login from './components/formularios/Login';
 
 const App = () => {
   return (
-      
-      <Container maxWidth="sm">
-         <div>
-        <MapView/>
-        </div>
-      </Container>
-    
+        
+        <Container maxWidth="sm">
+        {/* <Welcome message="ASW students"/>
+        <Box component="div" sx={{ py: 2}}>This is a basic example of a React application using Typescript. You can add your email to the list filling the form below.</Box>
+        <EmailForm OnUserListChange={refreshUserList}/>        
+        <UserList users={users}/>
+        <Link href="https://github.com/arquisoft/lomap_0">Source code</Link> */}
+<Login></Login>              
+    </Container>
+
   );
-}
-export default App
+};
+
+
+export default App;
