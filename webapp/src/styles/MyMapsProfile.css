@@ -1,0 +1,31 @@
+.mymap{
+    display: grid;
+    grid-template-columns: 15% auto 15%;  
+    background-color: white;
+    
+}
+
+.mapName{
+    background-color: white;
+    margin-right: 8%;
+    margin-left: 8%;
+    text-align: center;
+    font: 1.45em sans-serif;
+}
+
+.mymap > button{
+    background-color: white;
+    border-color: white;
+    border-style: none;
+    height: auto;
+    width: auto;
+}
+
+button:hover{
+    background-color: rgb(175, 175, 175);
+}
+
+img{
+    height: 55%;
+    width: 50%;
+}

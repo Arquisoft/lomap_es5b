@@ -10,18 +10,7 @@ import {User} from './shared/shareddtypes';
 import './App.css';
 import Login from './components/formularios/Login';
 
-function App(): JSX.Element {
-
-  const [users,setUsers] = useState<User[]>([]);
-
-  const refreshUserList = async () => {
-    setUsers(await getUsers());
-  }
-
-  useEffect(()=>{
-    refreshUserList();
-  },[]);
-
+const App = () => {
   return (
         
         <Container maxWidth="sm">
@@ -34,6 +23,7 @@ function App(): JSX.Element {
     </Container>
 
   );
-}
+};
+
 
 export default App;
