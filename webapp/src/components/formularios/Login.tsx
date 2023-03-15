@@ -1,5 +1,5 @@
 import { Button, TextField } from '@mui/material';
-import React, { useState } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import { ReactDOM } from 'react';
 import './Login.css';
 import { Lock } from '@material-ui/icons';
@@ -11,6 +11,11 @@ import {loginAndFetch} from '../../utils/LoginUtils';
 function Login(): JSX.Element {
     const [isLogged , setLogged] = useState(false);
     const [webId, setWebId] = useState("");
+
+    //guardamos el webId del pod
+    const handleWebId =(value : ChangeEvent<HTMLInputElement>)=>{
+        setWebId(value.target.value);
+    };
 
     const handlelogin = (e:React.FormEvent) => {
         //Con esta linea evitamos que el navegador se refresque para que lleve a cabo la accion correspondiente
@@ -43,14 +48,19 @@ function Login(): JSX.Element {
             />
             </div>
             */}
+            <div className='inputText'>
                 <TextField required 
                     name="webId"
                     label='Introduce nombre del pod'
+                    onChange={handleWebId}
                 />
+            </div>
+            <div className='buttons'>
                 <Button
                     type='submit'
                     variant='contained'
                 >Iniciar sesion</Button>
+            </div>
             {/*Implementar las acciones de los botones
             <div className='buttons'>
             <Button name='signup-button' className='signup-button' type="submit">Signup</Button>
