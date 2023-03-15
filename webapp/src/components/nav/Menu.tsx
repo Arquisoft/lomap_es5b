@@ -10,6 +10,7 @@ import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import StarsIcon from '@mui/icons-material/Stars';
 import PersonSearchIcon from '@mui/icons-material/PersonSearch';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import './Map.css'
 
 const StyledMenu = styled((props: MenuProps) => (
   <Menu
