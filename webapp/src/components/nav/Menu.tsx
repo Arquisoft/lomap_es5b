@@ -10,6 +10,7 @@ import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import StarsIcon from '@mui/icons-material/Stars';
 import PersonSearchIcon from '@mui/icons-material/PersonSearch';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 
 const StyledMenu = styled((props: MenuProps) => (
   <Menu
@@ -109,6 +110,11 @@ export default function CustomizedMenus() {
         <MenuItem onClick={handleClose} disableRipple>
           <AccountCircleIcon />
           Mi cuenta
+        </MenuItem>
+        <Divider sx={{ my: 0.5 }} />
+        <MenuItem onClick={handleClose} disableRipple>
+          <QuestionMarkIcon />
+          About us
         </MenuItem>
       </StyledMenu>
     </div>

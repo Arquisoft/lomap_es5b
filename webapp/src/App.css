@@ -1,43 +1,21 @@
-.contenedor-principal{
-  display: grid;
-  grid-template-areas:
-    'nav'
-    'body'
-    'footer';
+*{
+  margin: 0;
+  padding: 0;
 }
-
-.contenedor-navegacion{
-  grid-area: nav;
+html,body{
+  background: url('./images/main-background.jpg ');
+  background-position: center;
+  background-size: auto;
 }
-
-.contenedor-rutas{
-  grid-area: body;
+div{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
 }
 div div:first-child{
   /*primer div raro mui*/
 }
 .App {
 
-}
-.mapboxgl-control-container {
-  display: none;
-
-}
-div{
-  height: 100em;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-
-}
-.ejemplo{
-  display: grid;
-  text-align: center;
-}
-.contenedor-footer{
-  grid-area: footer;
-}
-.map{
-  width: 100%;
-  height: 60em;
 }
