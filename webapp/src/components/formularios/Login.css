@@ -9,17 +9,17 @@
     backdrop-filter: blur(50px);
     font-family: 'poppins','Comic Sans MS','sans-serif';
     padding: 2em;
-    min-height: 30vh;
+    min-height: 20vh;
     border-radius: 20px;
 }
 
 h1{
     text-align: center;
-    margin-bottom: 1em;
+    margin-bottom: 40px;
 }
 
 .inputText{
-    margin: 10px 5px;
+    margin: 20px 5px;
 }
 .inputText>div>label{
     color: white;

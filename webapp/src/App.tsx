@@ -8,7 +8,7 @@ import UserList from './components/UserList';
 import  {getUsers} from './api/api';
 import {User} from './shared/shareddtypes';
 import './App.css';
-import Login from './components/Login';
+import Login from './components/formularios/Login';
 
 function App(): JSX.Element {
 
