@@ -57,150 +57,56 @@ In the best case you will get away with examples or simple signatures.
 
 ****
 
-_**<Overview Diagram>**_
+image:diagramaLvl1.png["Level 1"]
 
 Motivation::
 
-_<text explanation>_
+La aplicación de LoMap es un sistema para crear mapas personalizados por los usuarios. Además, podrá añadir amigos, filtrar y otras opciones. La información privada de los usuarios se guarda en su propio POD.
 
 
 Contained Building Blocks::
-_<Description of contained building block (black boxes)>_
 
-Important Interfaces::
-_<Description of important interfaces>_
-
-[role="arc42help"]
-****
-Insert your explanations of black boxes from level 1:
-
-If you use tabular form you will only describe your black boxes with name and
-responsibility according to the following schema:
-
-[cols="1,2" options="header"]
 |===
-| **Name** | **Responsibility**
-| _<black box 1>_ | _<Text>_
-| _<black box 2>_ | _<Text>_
+| Nombre | Descripción
+| LoMap | Sistema con el que interactuarán los usuarios
+| Usuario | Cliente que usa la aplicación 
+| POD | Guarda la información de los usuarios. Cada usuario tiene su propio POD
 |===
-
-
-
-If you use a list of black box descriptions then you fill in a separate black box template for every important building block .
-Its headline is the name of the black box.
-****
-
-
-==== <Name black box 1>
-
-[role="arc42help"]
-****
-Here you describe <black box 1>
-according the the following black box template:
-
-* Purpose/Responsibility
-* Interface(s), when they are not extracted as separate paragraphs. This interfaces may include qualities and performance characteristics.
-* (Optional) Quality-/Performance characteristics of the black box, e.g.availability, run time behavior, ....
-* (Optional) directory/file location
-* (Optional) Fulfilled requirements (if you need traceability to requirements).
-* (Optional) Open issues/problems/risks
-
-****
-
-_<Purpose/Responsibility>_
-
-_<Interface(s)>_
-
-_<(Optional) Quality/Performance Characteristics>_
-
-_<(Optional) Directory/File Location>_
-
-_<(Optional) Fulfilled Requirements>_
-
-_<(optional) Open Issues/Problems/Risks>_
-
-
-
-
-==== <Name black box 2>
-
-_<black box template>_
-
-==== <Name black box n>
-
-_<black box template>_
-
-
-==== <Name interface 1>
-
-...
-
-==== <Name interface m>
-
-
 
 === Level 2
 
-[role="arc42help"]
-****
-Here you can specify the inner structure of (some) building blocks from level 1 as white boxes.
+image:diagramaLvl2.png["Level 2"]
 
-You have to decide which building blocks of your system are important enough to justify such a detailed description.
-Please prefer relevance over completeness. Specify important, surprising, risky, complex or volatile building blocks.
-Leave out normal, simple, boring or standardized parts of your system
-****
+Motivation::
 
-==== White Box _<building block 1>_
+Estructura interna LoMap. Se diferencia la parte de WebApp y RestApi. También se distingue la base de datos donde se guardará la información general.
 
-[role="arc42help"]
-****
-...describes the internal structure of _building block 1_.
-****
+Contained Building Blocks::
 
-_<white box template>_
-
-==== White Box _<building block 2>_
-
-
-_<white box template>_
-
-...
-
-==== White Box _<building block m>_
-
-
-_<white box template>_
+|===
+| Nombre | Descripción
+| WebApp | La interfaz del sistemacon la que el usuario interactuará para hacer todas sus peticiones
+| RestApi | Procesa y resuelve las peticiones. Pide información a la base de datos
+| Base de datos | Guarda la información pública y accesible para otros usuarios
+|===
 
 
 
 === Level 3
 
-[role="arc42help"]
-****
-Here you can specify the inner structure of (some) building blocks from level 2 as white boxes.
+image:diagramaLvl3.png["Level 3"]
 
-When you need more detailed levels of your architecture please copy this
-part of arc42 for additional levels.
-****
+Motivation::
 
+Estructura interna de LoMap más detallada. Se distingue los componentes que forman la aplicación y las peticiones que puede realizar el usuario.
 
-==== White Box <_building block x.1_>
+Contained Building Blocks::
 
-[role="arc42help"]
-****
-Specifies the internal structure of _building block x.1_.
-****
-
-
-_<white box template>_
-
-
-==== White Box <_building block x.2_>
-
-_<white box template>_
-
-
-
-==== White Box <_building block y.1_>
-
-_<white box template>_
+|===
+| Nombre | Descripción
+| Home | Pagina principal de la aplicacion
+| Login | Pagina para registrarse
+| Mapas Favs | Se guardarán los mapas que se marquen como favoritos
+| Amigos | Se podrá añadir a amigos y ver sus mapas favoritos
+| Mi Cuenta | Lugar donde ver y editar tu perfil
+|===
