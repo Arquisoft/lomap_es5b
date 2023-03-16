@@ -1,4 +1,4 @@
-import { getPodUrlAll, getStringNoLocale, getThing, getWebIdDataset, getSolidDataset } from "@inrupt/solid-client";
+import { getPodUrlAll, getStringNoLocale, getThing, getWebIdDataset, getSolidDataset, getFile, deleteFile, overwriteFile, saveFileInContainer } from "@inrupt/solid-client";
 import { fetch, getDefaultSession, handleIncomingRedirect, login } from "@inrupt/solid-client-authn-browser";
 
 
