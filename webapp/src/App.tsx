@@ -1,3 +1,4 @@
+import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import './App.css';
 import AboutUs from "./components/aboutUs/AboutUs";
@@ -9,7 +10,7 @@ import Profile from "./components/profile/Profile";
 
 const App = () => {
   return ( 
-/*      <>
+      <>
     <div className='principal'>
         <Router>
             <div className="navegacion">
@@ -27,7 +28,7 @@ const App = () => {
             </div>
         </Router>
     </div>
-    </>  */  
+    </>   
     /* <>
      <MapView></MapView> 
     </>  */  
@@ -36,9 +37,9 @@ const App = () => {
      <Login></Login> 
     </>  */
 
-    <>
+/*     <>
     <AboutUs></AboutUs>
-    </>
+    </> */
 
   );
 };

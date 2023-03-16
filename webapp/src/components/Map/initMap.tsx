@@ -12,6 +12,5 @@ export const initMap = (container: HTMLDivElement, coords: [number, number]) => 
         accessToken: "pk.eyJ1IjoiaWlteGlubiIsImEiOiJjbGYwdmV0eTQwMmN0M3JuemZuejdjYmhxIn0.rOU1O4rhty03r-D4fJeHzg",
         doubleClickZoom: false
     });
-    
     return map
 }
