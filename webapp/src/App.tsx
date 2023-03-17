@@ -1,26 +1,45 @@
-import React, { useState, useEffect } from 'react';
-import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
-import Container from '@mui/material/Container';
-import EmailForm from './components/EmailForm';
-import Welcome from './components/Welcome';
-import UserList from './components/UserList';
-import  {getUsers} from './api/api';
-import {User} from './shared/shareddtypes';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import './App.css';
-import Login from './components/formularios/Login';
+import AboutUs from "./components/aboutUs/AboutUs";
+import Login from "./components/formularios/Login";
+import Home from "./components/home/Home";
+import { MapView } from "./components/Map/Map";
+import Profile from "./components/profile/Profile";
+
 
 const App = () => {
-  return (
-        
-        <Container maxWidth="sm">
-        {/* <Welcome message="ASW students"/>
-        <Box component="div" sx={{ py: 2}}>This is a basic example of a React application using Typescript. You can add your email to the list filling the form below.</Box>
-        <EmailForm OnUserListChange={refreshUserList}/>        
-        <UserList users={users}/>
-        <Link href="https://github.com/arquisoft/lomap_0">Source code</Link> */}
-<Login></Login>              
-    </Container>
+  return ( 
+      <>
+    <div className='principal'>
+        <Router>
+            <div className="navegacion">
+
+            </div>
+
+            <div className="rutas">
+                <Routes>
+                  <Route path={"/"} element={<Home/>} />
+                  <Route path="/Mapa" element={<MapView/>} />
+                  <Route path="/Login" element={<Login/>} />
+                  <Route path="/Aboutus" element={<AboutUs/>}/>
+                  
+                </Routes>
+            </div>
+        </Router>
+    </div>
+    </>   
+    /* <>
+     <MapView></MapView> 
+    </>  */  
+    
+     /* <>
+     <Login></Login> 
+    </>  */
+
+/*     <>
+    <AboutUs></AboutUs>
+    </> */
 
   );
 };
