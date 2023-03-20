@@ -38,9 +38,10 @@ o se va autenticar en el sistema.
 [plantuml,"Login",png]
 ----
 actor Bob
-participant API
 participant LoMap
+participant API
 database Pod as "Bob's Pod"
+
 Bob -> LoMap: llamada a login() de Bob
 LoMap -> API: obtener datos de Bob
 API -> Pod: accede a datos de Bob access()
@@ -58,13 +59,14 @@ actor Alice
 participant LoMap
 participant Pod
 database MongoDB
+
 Bob -> LoMap: compartirCon
 LoMap -> MongoDB: extraePersonas
 MongoDB -> MongoDB: guarda lugar en los usuarios
 MongoDB --> Pod: actualiza pods de usuarios
-MongoDB --> LoMap: confirmacion
+Pod --> LoMap: confirmacion
 LoMap --> Bob: success
-LoMap -> Alice: notificacion
+LoMap --> Alice: notificacion
 ----
 
 === Interaccion con el mapa
@@ -74,13 +76,16 @@ como escribir comentarios en ellos.
 [plantuml,"InteractiveMap_01",png]
 ----
 actor Bob
-participant API
 participant LoMap
+participant API
 database MongoDB
+
 Bob -> LoMap: vision del mapa
-LoMap -> Bob: vista
+LoMap --> Bob: vista
 Bob -> LoMap: actionClick()
 LoMap -> API: obtener datos de click
+API -> MongoDB: obtener datos 
+MongoDB --> LoMap: envuelve los datos en objeto
 API --> LoMap: envuelve los datos en objeto
 LoMap -> Bob: accion de guardar (o editar)
 Bob -> LoMap: enviar accion
