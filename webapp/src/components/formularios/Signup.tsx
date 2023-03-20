@@ -8,9 +8,12 @@ import './Login.css';
 function Signup(): JSX.Element{
 
 
-    
+
     const handlesignup = () =>{
         //llamada a crear usuario si este no esta ya creado
+        //1. obtener datos de los campos y crear un Json con ellos
+
+        //2. añadir los datos al pod con saveFileInContainer
     };
      const retunToLoggin = () => {
         //volver a la vista de loggin si el usuario se ha equivocado
