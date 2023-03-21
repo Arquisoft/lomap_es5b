@@ -2,7 +2,7 @@ import { getPodUrlAll, getStringNoLocale, getThing, getWebIdDataset, getSolidDat
 import { fetch, getDefaultSession, handleIncomingRedirect, login } from "@inrupt/solid-client-authn-browser";
 
 
-async function loginAndFetch(webId:string) {
+async function loginAndFetch(webId:string, privider:string) {
     // 1. Call `handleIncomingRedirect()` to complete the authentication process.
     //    If called after the user has logged in with the Solid Identity Provider, 
     //      the user's credentials are stored in-memory, and
@@ -16,7 +16,7 @@ async function loginAndFetch(webId:string) {
         //clientSecret: webId,
         // Specify the URL of the user's Solid Identity Provider;
         // e.g., "https://login.inrupt.com".
-        oidcIssuer: "https://solidweb.org",
+        oidcIssuer: privider,
         // Specify the URL the Solid Identity Provider should redirect the user once logged in,
         // e.g., the current page for a single-page app.
         //o otra url 
