@@ -32,7 +32,7 @@ function App(): JSX.Element {
         <UserList users={users}/>
         <Link href="https://github.com/arquisoft/lomap_0">Source code</Link> */}
       {/**<Login></Login> */}
-      <Signup></Signup>
+      <Login></Login>
       </Container>
     
   );

@@ -33,14 +33,14 @@ function Login(): JSX.Element {
     };
 
     const providerOption = providers.map((key,value)=>{
-        <option key={key} value={value}>{value}</option>
+        return (<option key={key} value={value}>{key}</option>)
     });
 
     return (
         
         <form className='login-form' name='login-form' onSubmit={handlelogin}>
             {/* añadir el logo aqui <image name='login-logo' href='' />*/}
-            <h1>Escoge tu Proovedor</h1>
+            <h1>Escoge tu Provedor</h1>
     {/*
             <div className='inputText'>
             <AccountCircle></AccountCircle>
