@@ -6,5 +6,5 @@ export type User = {
 export type AuthUser = {
   name:string;
   email:string;
-  password:string;
+  password?:string;
 }; 

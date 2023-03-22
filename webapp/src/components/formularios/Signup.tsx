@@ -1,18 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { ReactDOM } from 'react';
 import { Button, TextField} from '@mui/material';
 import { Lock } from '@material-ui/icons';
 import { AccountCircle } from '@mui/icons-material';
-import './Signup.css';
+import '../../stylesheets/Signup.css';
+import {AuthUser} from '../../shared/shareddtypes';
 
 
 type SignupinProps = {
     onFormSwitch:(formName:string)=>void;
+    user:AuthUser;
+    onUserChange:(newUser:AuthUser)=>void;
 };
 
 
 function Signup(props:SignupinProps): JSX.Element{
-
+    //const [user,setUser] = useState<AuthUser>({email:"emptyMail",name:"emptyName",password:"emptyPasswd"});
    
 
     const handlesignup = () =>{
@@ -20,6 +23,15 @@ function Signup(props:SignupinProps): JSX.Element{
         //1. obtener datos de los campos y crear un Json con ellos
 
         //2. añadir los datos al pod con saveFileInContainer
+    };
+
+    //cada vez que cambie onuserchange se actualiza el valor del usuario
+    const handleUserChange = () =>{
+        const userUpdated = {
+            ...props.user//esta linea copia el objeto usuario
+            //agregar los datos correspondientes del formulario (obtenerlo de los eventos, eliminar linea de arriba)
+        };
+        props.onUserChange(userUpdated);
     };
 
 

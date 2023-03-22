@@ -1,10 +1,9 @@
 import { Button, TextField } from '@mui/material';
 import React, { ChangeEvent, ChangeEventHandler, useEffect, useState } from 'react';
 import { ReactDOM } from 'react';
-import './Login.css';
+import '../../stylesheets/PODChooser.css';
 import { Lock } from '@material-ui/icons';
 import { AccountCircle } from '@mui/icons-material';
-//importar css
 import {loginAndFetch} from '../../utils/LoginUtils';
 import {providers} from '../proveedores/providers';
 
