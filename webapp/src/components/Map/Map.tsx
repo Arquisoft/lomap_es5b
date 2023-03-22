@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { useMap } from './useMap';
+import './Map.css';
 
 export const MapView = () => {
 
@@ -7,6 +8,7 @@ export const MapView = () => {
     useMap(mapRef)
 
     return (
-        <div ref={mapRef} className='map' />
+        <div ref={mapRef} className='map' /> 
+
     )
 }

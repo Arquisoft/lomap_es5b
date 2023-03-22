@@ -1,0 +1,10 @@
+.primero {
+    background-color: white;
+    background-position: center;
+    text-align: left;
+    height: 300%;
+    width: 300%;
+    font-size: large;
+    font-style: italic;
+    position: absolute;
+}
