@@ -8,6 +8,7 @@ function Home() {
                 Puede iniciar sesión para comenzar a navegar.</h1>
                 
                 <div className="segundo">
+                    
 
                 </div>
         </div>
