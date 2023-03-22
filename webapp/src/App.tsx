@@ -8,8 +8,10 @@ import UserList from './components/UserList';
 import  {getUsers} from './api/api';
 import {User} from './shared/shareddtypes';
 import './App.css';
-import Login from './components/formularios/Login';
+import PODChooser from './components/formularios/PODChooser';
 import Signup from './components/formularios/Signup';
+import Login from './components/formularios/Login';
+import MainLoginForm from './components/formularios/MainLoginForm';
 
 function App(): JSX.Element {
 
@@ -41,7 +43,8 @@ function App(): JSX.Element {
         <UserList users={users}/>
         <Link href="https://github.com/arquisoft/lomap_0">Source code</Link> */}
       {/**<Login></Login> */}
-      <Login updateIsUserLogged={isLogged}></Login>
+      {/**<PODChooser updateIsUserLogged={isLogged}></PODChooser> */}
+      <MainLoginForm></MainLoginForm>
       </Container>
     
   );
