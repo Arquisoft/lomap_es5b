@@ -14,7 +14,8 @@
     padding-bottom: 5em;
     min-height: 20vh;
     border-radius: 20px;
-    margin-left: 22em;
+    margin-left: 16em;
+    height: 60%;
 }
 h1{
     text-align: center;
@@ -31,7 +32,7 @@ h1{
 .buttons{
     justify-content: center;
     width: 100%;
-    height: 25%;
+    height: 20%;
 }
 .buttons button{
     padding: 0 1.5em;
