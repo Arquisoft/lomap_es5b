@@ -11,6 +11,11 @@ import StarsIcon from '@mui/icons-material/Stars';
 import PersonSearchIcon from '@mui/icons-material/PersonSearch';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
+import './Menu.css';
+import { Link } from "react-router-dom";
+
+
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 const StyledMenu = styled((props: MenuProps) => (
   <Menu
@@ -53,6 +58,8 @@ const StyledMenu = styled((props: MenuProps) => (
   },
 }));
 
+
+
 export default function CustomizedMenus() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -64,9 +71,10 @@ export default function CustomizedMenus() {
   };
 
   return (
-    <div>
+    <div className='menuPrincipal'>
       <Button
         id="menu"
+        className='principal'
         aria-controls={open ? 'demo-customized-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
@@ -78,45 +86,43 @@ export default function CustomizedMenus() {
       >
         LoMap
       </Button>
-      <StyledMenu
+      <Menu
         id="demo-customized-menu"
-        MenuListProps={{
-          'aria-labelledby': 'menu',
-        }}
+        className='estilo'
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose} disableRipple>
+        <MenuItem className='secundarios' onClick={handleClose} disableRipple>
           <HomeIcon />
           Home
         </MenuItem>
         <Divider sx={{ my: 0.5 }} />
-        <MenuItem onClick={handleClose} disableRipple>
+        <MenuItem className='secundarios' onClick={handleClose} disableRipple>
           <FilterAltIcon />
           Filtrar
         </MenuItem>
         <Divider sx={{ my: 0.5 }} />
-        <MenuItem onClick={handleClose} disableRipple>
+        <MenuItem className='secundarios' onClick={handleClose} disableRipple>
           <StarsIcon />
           Mapas favoritos
         </MenuItem>
         <Divider sx={{ my: 0.5 }} />
-        <MenuItem onClick={handleClose} disableRipple>
+        <MenuItem className='secundarios' onClick={handleClose} disableRipple>
           <PersonSearchIcon />
           Buscar
         </MenuItem>
         <Divider sx={{ my: 0.5 }} />
-        <MenuItem onClick={handleClose} disableRipple>
+        <MenuItem className='secundarios' onClick={handleClose} disableRipple>
           <AccountCircleIcon />
           Mi cuenta
         </MenuItem>
         <Divider sx={{ my: 0.5 }} />
-        <MenuItem onClick={handleClose} disableRipple>
+        <MenuItem className='secundarios' onClick={handleClose} disableRipple>
           <QuestionMarkIcon />
           About us
         </MenuItem>
-      </StyledMenu>
+      </Menu>
     </div>
   );
 }

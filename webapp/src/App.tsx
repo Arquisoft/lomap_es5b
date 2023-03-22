@@ -6,28 +6,28 @@ import Login from "./components/formularios/Login";
 import Home from "./components/home/Home";
 import { MapView } from "./components/Map/Map";
 import Profile from "./components/profile/Profile";
+import MenuNav from "./components/nav/MenuNav";
 
 
 const App = () => {
   return ( 
       <>
-    <div className='principal'>
+    <main className='principal'><div className="mapeado">
         <Router>
             <div className="navegacion">
-
+              <MenuNav />
             </div>
-
-            <div className="rutas">
+    <div className="rutas">
                 <Routes>
                   <Route path={"/"} element={<Home/>} />
                   <Route path="/Mapa" element={<MapView/>} />
                   <Route path="/Login" element={<Login/>} />
                   <Route path="/Aboutus" element={<AboutUs/>}/>
-                  
+
                 </Routes>
-            </div>
-        </Router>
-    </div>
+                </div>
+        </Router></div>
+    </main>
     </>   
     /* <>
      <MapView></MapView> 
