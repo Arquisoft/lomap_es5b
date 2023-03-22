@@ -1,43 +1,24 @@
-import { Button, TextField } from '@mui/material';
-import React, { ChangeEvent, useState } from 'react';
-import { ReactDOM } from 'react';
-import './Login.css';
-import { Lock } from '@material-ui/icons';
-import { AccountCircle } from '@mui/icons-material';
-//importar css
-import {loginAndFetch} from '../../utils/LoginUtils';
+import { AccountCircle,Lock } from '@mui/icons-material';
+import { TextField, Button } from '@mui/material';
+import React, { useState } from 'react';
+import '../../stylesheets/Login.css';
 
 
-function Login(): JSX.Element {
-    const [isLogged , setLogged] = useState(false);
-    const [webId, setWebId] = useState("");
+type LoginProps = {
+    onFormSwitch:(formName:string)=>void;
+};
 
-    //guardamos el webId del pod
-    const handleWebId =(value : ChangeEvent<HTMLInputElement>)=>{
-        setWebId(value.target.value);
-    };
+function Login(props: LoginProps): JSX.Element{
 
-    const handlelogin = (e:React.FormEvent) => {
-        //Con esta linea evitamos que el navegador se refresque para que lleve a cabo la accion correspondiente
-        e.preventDefault();
-        
-        loginAndFetch(webId);
-        setLogged(true);
-    };
 
-    return (
-        
-        <form className='login-form' name='login-form' onSubmit={handlelogin}>
-            {/* añadir el logo aqui <image name='login-logo' href='' />*/}
-            <h1>Escoge tu POD</h1>
-    {/*
+    return(
+        <form className='login-form' name='login-form'>
             <div className='inputText'>
             <AccountCircle></AccountCircle>
             <TextField required
                 name="username"
                 label='User'
             />
-            
             </div>
             <div className='inputText'>
             <Lock></Lock>
@@ -47,30 +28,11 @@ function Login(): JSX.Element {
                 type={'password'}
             />
             </div>
-            */}
-            <div className='inputText'>
-                <TextField required 
-                    name="webId"
-                    label='Introduce nombre del pod'
-                    onChange={handleWebId}
-                />
-            </div>
-            <div className='buttons'>
-                <Button
-                    type='submit'
-                    variant='contained'
-                >Iniciar sesion</Button>
-            </div>
-            {/*Implementar las acciones de los botones
-            <div className='buttons'>
-            <Button name='signup-button' className='signup-button' type="submit">Signup</Button>
-            <Button name='login-button' className='login-button' type="submit">Login</Button>
-            </div>
-            */}
+            <Button name='login-button' className='login-button'   type="submit">Inicia sesion</Button>  
+            <Button name='signup-button' className='signup-button'  type="submit" onClick={()=>props.onFormSwitch("signup")}>Registrate</Button>  
         </form>
-
     );
-}
+};
 
 
 export default Login;
