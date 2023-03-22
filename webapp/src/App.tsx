@@ -1,53 +1,52 @@
-import React, { useState, useEffect } from 'react';
-import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
-import Container from '@mui/material/Container';
-import EmailForm from './components/EmailForm';
-import Welcome from './components/Welcome';
-import UserList from './components/UserList';
-import  {getUsers} from './api/api';
-import {User} from './shared/shareddtypes';
+import React,  { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import './App.css';
 import PODChooser from './components/formularios/PODChooser';
 import Signup from './components/formularios/Signup';
 import Login from './components/formularios/Login';
 import MainLoginForm from './components/formularios/MainLoginForm';
+import AboutUs from "./components/aboutUs/AboutUs";
+import Home from "./components/home/Home";
+import { MapView } from "./components/Map/Map";
+import Profile from "./components/profile/Profile";
+import MenuNav from "./components/nav/MenuNav";
 
-function App(): JSX.Element {
 
-  const [users,setUsers] = useState<User[]>([]);
+const App = () => {
+
   const [userLoged,setUserLogged] = useState(false);
-  
-  const refreshUserList = async () => {
-    setUsers(await getUsers());
-  }
-
-  useEffect(()=>{
-    //refreshUserList();
-  },[]);
 
   const isLogged =(isUserLoged:boolean)=>{
-      setUserLogged(isUserLoged);
-      console.log("Componente padre "+userLoged );
-      return userLoged;
-    }
+    setUserLogged(isUserLoged);
+    console.log("Componente padre "+userLoged );
+    return userLoged;
+  };
 
+  return ( 
+      <>
+    <main className='principal'><div className="mapeado">
+        <Router>
+            <div className="navegacion">
+              <MenuNav />
+            </div>
+    <div className="rutas">
+                <Routes>
+                  <Route path={"/"} element={<Home/>} />
+                  <Route path="/Mapa" element={<MapView/>} />
+                  <Route path="/Login" element={<MainLoginForm/>} />
+                  <Route path="/Aboutus" element={<AboutUs/>}/>
 
-
-  return (
-    
-      <Container maxWidth="sm">
-        {/* <Welcome message="ASW students"/>
-        <Box component="div" sx={{ py: 2}}>This is a basic example of a React application using Typescript. You can add your email to the list filling the form below.</Box>
-        <EmailForm OnUserListChange={refreshUserList}/>        
-        <UserList users={users}/>
-        <Link href="https://github.com/arquisoft/lomap_0">Source code</Link> */}
-      {/**<Login></Login> */}
-      {/**<PODChooser updateIsUserLogged={isLogged}></PODChooser> */}
-      <MainLoginForm></MainLoginForm>
-      </Container>
-    
+                </Routes>
+                </div>
+        </Router></div>
+    </main>
+    {/** <MapView></MapView>  */}
+    {/**<PODChooser updateIsUserLogged={isLogged}></PODChooser>  <MainLoginForm></MainLoginForm> **/}
+    {/** <Login></Login>  */}
+    {/** <AboutUs></AboutUs>  */}
+    </>
   );
-}
+};
+
 
 export default App;
