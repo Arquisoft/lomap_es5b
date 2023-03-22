@@ -14,7 +14,8 @@ import Signup from './components/formularios/Signup';
 function App(): JSX.Element {
 
   const [users,setUsers] = useState<User[]>([]);
-
+  const [userLoged,setUserLogged] = useState(false);
+  
   const refreshUserList = async () => {
     setUsers(await getUsers());
   }
@@ -22,6 +23,14 @@ function App(): JSX.Element {
   useEffect(()=>{
     //refreshUserList();
   },[]);
+
+  const isLogged =(isUserLoged:boolean)=>{
+      setUserLogged(isUserLoged);
+      console.log("Componente padre "+userLoged );
+      return userLoged;
+    }
+
+
 
   return (
     
@@ -32,7 +41,7 @@ function App(): JSX.Element {
         <UserList users={users}/>
         <Link href="https://github.com/arquisoft/lomap_0">Source code</Link> */}
       {/**<Login></Login> */}
-      <Login ></Login>
+      <Login updateIsUserLogged={isLogged}></Login>
       </Container>
     
   );

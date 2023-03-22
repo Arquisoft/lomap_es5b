@@ -1,5 +1,5 @@
 import { Button, TextField } from '@mui/material';
-import React, { ChangeEvent, ChangeEventHandler, useState } from 'react';
+import React, { ChangeEvent, ChangeEventHandler, useEffect, useState } from 'react';
 import { ReactDOM } from 'react';
 import './Login.css';
 import { Lock } from '@material-ui/icons';
@@ -8,18 +8,26 @@ import { AccountCircle } from '@mui/icons-material';
 import {loginAndFetch} from '../../utils/LoginUtils';
 import {providers} from '../proveedores/providers';
 
+type LoginCalls = {
+    updateIsUserLogged : (isLog:boolean) => boolean;
+};
 
-function Login(): JSX.Element {
+
+function Login(prop:LoginCalls): JSX.Element {
     const [isLogged , setLogged] = useState(false);
     const [webId, setWebId] = useState("");
     const [selectedOption, setSelectedOption] = useState("");
     
-
+    const sendData= ()=>{
+        return isLogged;
+    };
+    
     //guardamos el webId del pod
     const handleWebId =(value : ChangeEvent<HTMLInputElement>)=>{
         setWebId(value.target.value);
     };
 
+    //manejador para cuando elegimos un proovedor
     const handleOptionChange = (event:React.ChangeEvent<HTMLSelectElement>) => {
         setSelectedOption(event.target.value);
     };
@@ -27,14 +35,25 @@ function Login(): JSX.Element {
     const handlelogin = (e:React.FormEvent) => {
         //Con esta linea evitamos que el navegador se refresque para que lleve a cabo la accion correspondiente
         e.preventDefault();
-        const provider = selectedOption
+        //
+        const provider = selectedOption;
         loginAndFetch(webId,provider);//hacer estado para provider segun el elemento seleccionado
-        setLogged(true);
+        const success = setLogged(true);
+        //actualizamos el elemento padre para transmitir que el usuario esta logeado
+        console.log("Componente hijo "+isLogged);
+        prop.updateIsUserLogged(isLogged);
     };
 
-    const providerOption = providers.map((key,value)=>{
-        return (<option key={key} value={value}>{key}</option>)
+    //opciones de proovedores que nos llegan por parametros
+    const providerOption = providers.map((value,key)=>{
+        return (<option key={key} value={value}>{value}</option>)
     });
+
+    //el usseEfect se realiza para cuando existen cambios en un componente, realizar la funcion indicada. 
+    //Si queremos que no se actualize siempre, añadir la dependencia entre [] para indicar que solo se realice cuando ese elemento cambie
+    //useEffect(()=>{
+    //    console.log(isLogged);
+    //},[isLogged]);
 
     return (
         

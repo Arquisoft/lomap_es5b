@@ -16,7 +16,7 @@ function Signup(): JSX.Element{
         //2. añadir los datos al pod con saveFileInContainer
     };
      const retunToLoggin = () => {
-        //volver a la vista de loggin si el usuario se ha equivocado
+        //volver a la vista de loggin si el usuario se ha equivocado de opcion
      };
 
     return (
