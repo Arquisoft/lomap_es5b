@@ -6,7 +6,7 @@ export const initMap = (container: HTMLDivElement) => {
         container,
         style: 'mapbox://styles/mapbox/satellite-v9',
         pitchWithRotate: false,
-        zoom: 18,
+        zoom: 16,
         accessToken: "pk.eyJ1IjoiaWlteGlubiIsImEiOiJjbGYwdmV0eTQwMmN0M3JuemZuejdjYmhxIn0.rOU1O4rhty03r-D4fJeHzg",
         doubleClickZoom: false
         
