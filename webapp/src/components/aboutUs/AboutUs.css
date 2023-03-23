@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.section {
+    width: 110%;
+    min-height: 100vh;
+    background-color: white;
+    background-position: center;
+    text-align: center;
+    height: 110%;
+    position: absolute;
+
+}
+.container {
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 100px;
+}
+
+.content-section {
+
+    padding-right:50%;
+    float:left;
+    width: 40%;
+    height: 100%;
+    text-align: center;
+}
+
+.content-section .title {
+    margin-top: 10%;
+    text-transform: 20px;
+    font-size: 28px;
+    padding-left:100%;
+    margin-left: 10%;
+}
+
+.content-section .content {
+    margin-top: 170px;
+    color: #5d5d5d;
+    padding-right:100%;
+
+
+}
+
+.team-members .miembro{
+    margin-top: 30px;
+    margin-left: 5%;
+}
+
+
+.team-members .roles {
+    margin-top: 180px;
+    text-align: center;
+    position: relative;
+    margin-block: 66;
+    font-size: 10px;
+
+}
