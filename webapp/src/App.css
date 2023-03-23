@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding: 0;
+  max-height: 150%;
 }
 html,body{
   background: url('./images/main-background.jpg ');
@@ -8,8 +9,7 @@ html,body{
   background-size: auto;
   height: 100%;
   width: auto;
-  max-height: 100%;
-  overflow: hidden;
+  
 }
 body{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;

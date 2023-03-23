@@ -110,3 +110,4 @@ Contained Building Blocks::
 | Amigos | Se podrá añadir a amigos y ver sus mapas favoritos
 | Mi Cuenta | Lugar donde ver y editar tu perfil
 |===
+

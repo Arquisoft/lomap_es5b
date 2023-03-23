@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { Map } from 'mapbox-gl';
-import { initMap } from './initMap';
+import { initMap } from './iniciarMapa';
 import { generateNewMarker } from './generateNewMarker';
 
 export const useMap = (container: React.RefObject<HTMLDivElement>) => {
@@ -11,9 +11,9 @@ export const useMap = (container: React.RefObject<HTMLDivElement>) => {
         if (container.current) {
 
             mapInitRef.current = initMap(
-                container.current,
-                [-5.8512892, 43.3548049]
+                container.current
             );
+
 
         }
     }, []);
