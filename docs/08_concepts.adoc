@@ -59,7 +59,7 @@ image::lomap_uml.png[]
 
 === Security
 
-Como en todo sistema informático la seguridad de nuestra aplicación, y la privacidad e integridad de los datos de nuestros usuarios es una de las partes más importantes del proyecto. En este proyecto se hará principal incapié en la eliminación de cualquier brecha de seguridad web que pueda poner en peligro el producto final. Se tomarán medidas antes distintos tipos de vulnerabilidades como ataques de SQLInjection y XSS (Cross-Site Scripting).
+Como en todo sistema informático la seguridad de nuestra aplicación, y la privacidad e integridad de los datos de nuestros usuarios es una de las partes más importantes del proyecto. En este proyecto se hará principal incapié en la eliminación de cualquier brecha de seguridad web que pueda poner en peligro el producto final. Se tomarán medidas antes distintos tipos de vulnerabilidades como ataques XSS (Cross-Site Scripting).
 
 
 
