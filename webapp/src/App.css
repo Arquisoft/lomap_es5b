@@ -1,23 +1,18 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
 }
-
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html,body{
+  background: url('./images/main-background.jpg ');
+  background-position: center;
+  background-size: auto;
+  height: 100%;
+  width: auto;
+  max-height: 100%;
+  overflow: hidden;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .App-link {
@@ -31,4 +26,71 @@
   to {
     transform: rotate(360deg);
   }
+}
+.mapboxgl-control-container {
+  display: none;
+  text-decoration: none;
+}
+.rutas{
+  width: 100%;
+  height: 100%;
+  padding-top: 5%;
+  padding-left: 2%;
+}
+div{
+  height: max-content;
+  display: flex;
+  /* justify-content: center; */
+  width: 100%;
+  height: 100%;
+}
+
+.mapboxgl-marker{
+  display: none;
+}
+
+.ejemplo{
+  display: grid;
+  text-align: center;
+}
+.contenedor-footer{
+  grid-area: footer;
+}
+.navegacion{
+  display: inline-block;
+}
+
+.principal{
+  width: fit-content;
+  height: 100;
+}
+.menuNav{
+  background-color: rgb(215, 213, 213);
+  width: 13rem;
+  height: 100%;
+  border-right: 5px solid black;
+  font-size: x-large;
+  justify-content: center;
+
+}
+ul {
+  padding: 1rem 2rem;
+  list-style: none;
+  width: 100%;
+  text-align: center;
+}
+li{
+  margin-bottom: 2rem;
+  padding: 5px ;
+  background-color: rgb(183, 183, 183);
+  width: 100%;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+a:hover{
+  color: rgb(217, 3, 217);
 }

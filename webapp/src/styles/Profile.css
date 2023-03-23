@@ -1,0 +1,79 @@
+.all{
+   
+    background-image: url("../images/gradiant-login.webp");
+    display: grid;
+    grid:  
+          ". . . . . . ." 
+          ". i i i i i ."
+          ". i i i i i ."
+          ". m m m m m ."
+          ". m m m m m ."
+          ". m m m m m ."
+          ". m m m m m ."
+          ". . . . . . ."         
+          ;
+}
+
+.info{
+    grid-area: i;
+    display: grid;
+    grid: ". . . . . ." 
+          "a a ti ti ti ."
+          "a a ti ti ti ."
+          "a a e . . ."
+          ". . . . . ."    
+          ;
+    gap: 0.5em;
+    margin-left: 18%;
+    margin-right: 18%;
+    margin-top: 3%;
+    margin-bottom: 1%;
+    background-color: white;
+    border: 0.1em;
+    border-style: solid;
+    padding: 0rem 1rem;
+    padding-bottom: 1%;
+    border-radius: 10px;
+    
+}
+
+.textInfo{
+    grid-area: ti;
+    display: grid;
+    grid: "n n n n n"   
+          "s s s s ."
+          ;
+}
+
+.avatar{
+    grid-area: a;
+    margin-top: 1.5rem;
+}
+.textInfo > h2{grid-area: n; margin-bottom: -2%;}
+.userName{grid-area: s}
+input[value="Editar"]{grid-area: e;}
+
+
+.maps{
+    grid-area: m;
+    border: 0.1em;
+    border-style: solid;
+    margin-left: 18%;
+    margin-right: 18%;
+    margin-top: 0.2%;
+    margin-bottom: 10%;
+    background-color: white;
+    padding: 0rem 1rem;
+    border-radius: 10px;
+}
+
+.maps > h2{
+    margin-top: 0.7%;
+    margin-bottom: 2%;
+    text-decoration: underline;
+}
+
+.mmpc3{
+    margin-bottom: 1.5%;
+}
+
